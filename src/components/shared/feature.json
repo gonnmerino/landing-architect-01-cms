@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_shared_features",
+  "info": {
+    "displayName": "Feature",
+    "icon": "emotionHappy"
+  },
+  "options": {},
+  "attributes": {
+    "FeatureTitle": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "Icon": {
+      "type": "enumeration",
+      "enum": [
+        "Window",
+        "Materials",
+        "Time",
+        "Pencil-Ruler",
+        "Calendar",
+        "Hat"
+      ]
+    }
+  },
+  "config": {}
+}

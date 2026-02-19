@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_shared_images",
+  "info": {
+    "displayName": "Images",
+    "icon": "landscape"
+  },
+  "options": {},
+  "attributes": {
+    "Image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Description": {
+      "type": "text"
+    },
+    "ShowInCarousel": {
+      "type": "boolean"
+    }
+  },
+  "config": {}
+}

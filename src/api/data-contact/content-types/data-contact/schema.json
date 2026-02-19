@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "data_contacts",
+  "info": {
+    "singularName": "data-contact",
+    "pluralName": "data-contacts",
+    "displayName": "DataContact"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "LastName": {
+      "type": "string"
+    },
+    "PhoneNumber": {
+      "type": "string"
+    },
+    "Email": {
+      "type": "email"
+    }
+  }
+}
