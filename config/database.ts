@@ -42,7 +42,7 @@ export default ({ env }) => {
           ssl: env.bool('DATABASE_SSL', true) && {
             rejectUnauthorized: env.bool(
               'DATABASE_SSL_REJECT_UNAUTHORIZED',
-              false
+              true
             ),
           },
           schema: env('DATABASE_SCHEMA', 'public'),
