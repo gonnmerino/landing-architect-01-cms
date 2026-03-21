@@ -430,6 +430,40 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiClientOpinionClientOpinion
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'client_opinions';
+  info: {
+    displayName: 'ClientOpinion';
+    pluralName: 'client-opinions';
+    singularName: 'client-opinion';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    ClientImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    ClientName: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::client-opinion.client-opinion'
+    > &
+      Schema.Attribute.Private;
+    Opinion: Schema.Attribute.Text;
+    project: Schema.Attribute.Relation<'oneToOne', 'api::project.project'>;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiDataContactDataContact extends Struct.CollectionTypeSchema {
   collectionName: 'data_contacts';
   info: {
@@ -1038,6 +1072,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::client-opinion.client-opinion': ApiClientOpinionClientOpinion;
       'api::data-contact.data-contact': ApiDataContactDataContact;
       'api::project.project': ApiProjectProject;
       'api::service.service': ApiServiceService;
